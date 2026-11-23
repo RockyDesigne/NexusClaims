@@ -1,0 +1,15 @@
+.title { margin: 0 0 18px; font-size: 22px; }
+.help { color: #667085; font-size: 13px; margin: 0 0 16px; }
+.editor { display: grid; grid-template-columns: minmax(120px, .8fr) minmax(160px, 1.2fr) minmax(135px, .9fr) minmax(150px, 1fr) minmax(95px, .6fr) minmax(160px, 1.3fr); gap: 14px; padding: 0; margin: 0 0 16px; border: 0; min-width: 0; }
+.editor > div { min-width: 0; }
+.editor input, .editor select, .editor textarea { min-width: 0; box-sizing: border-box; width: 100%; }
+.ledger { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, 0.28fr); gap: 16px; align-items: start; }
+.ledger > div, .ledger > aside { min-width: 0; }
+.ledger th { white-space: nowrap; }
+.ledger td { vertical-align: top; }
+.amount { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.details { min-width: 170px; max-width: 300px; overflow-wrap: anywhere; white-space: pre-wrap; }
+.balances { color: #145ea8; font-size: 13px; text-align: right; overflow-wrap: anywhere; }
+.total { color: #17202a; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; }
+@media (min-width: 861px) and (max-width: 1100px) { .editor { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 860px) { .editor, .ledger { grid-template-columns: minmax(0, 1fr); } }

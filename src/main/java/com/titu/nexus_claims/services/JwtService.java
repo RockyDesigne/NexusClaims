@@ -1,0 +1,42 @@
+package com.titu.nexus_claims.services;
+
+import com.titu.nexus_claims.models.User;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+import java.nio.charset.StandardCharsets;
+import java.security.Key;
+import java.time.Instant;
+import java.util.Date;
+import java.util.Map;
+import java.util.UUID;
+
+@Service
+public class JwtService {
+    private static final long EXPIRATION_MS = 8 * 60 * 60 * 1000L; // 8h
+
+    private final Key signingKey; // computed once
+
+    public JwtService(@Value("${security.jwt.hmac-secret}") String secret) {
+        this.signingKey = secret.isBlank()
+                ? Jwts.SIG.HS256.key().build()
+                : Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
+    }
+
+    public String generateToken(User user) {
+        Instant now = Instant.now();
+        return Jwts.builder()
+                .header().type("JWT").and()
+                .issuer("https://secure-file-share.dedyn.io")
+                .audience().add("fileshare-api").and()
+                .subject(user.getUsername())
+                .id(UUID.randomUUID().toString())
+                .issuedAt(Date.from(now))
+                .expiration(new Date(now.toEpochMilli() + EXPIRATION_MS))
+                .claims(Map.of("role", "ROLE_ADMIN"))
+                .signWith(signingKey) // reused, not recomputed
+                .compact();
+    }
+}

@@ -1,0 +1,74 @@
+server:
+  address: "${ADDRESS:127.0.0.1}"
+  port: "${PORT:8081}"
+  forward-headers-strategy: framework
+  error:
+    include-message: always
+    include-exception: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    health:
+      show-details: always
+    env:
+      enabled: false
+    prometheus:
+      enabled: true
+
+# Configuration properties
+security:
+  jwt:
+    hmac-secret: "${JWT_HMAC_SECRET:}"
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 12MB
+  aot:
+    enabled: false
+
+  application:
+    name: "nexus-claims"
+
+  config:
+    location: "file://./src/main/resources/application.yml"
+
+  devtools:
+    add-properties: "${NA_DEVTOOLS:false}"
+
+  jmx:
+    enabled: "${JMX_ENABLED:false}"
+
+  datasource:
+    url: jdbc:sqlite:file-share.db  # Database file name (relative to project directory)
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: update             # Automatically create/update tables
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    tags-sorter: alpha
+    operations-sorter: alpha
+    doc-expansion: none
+  show-actuator: "${NA_ENABLE_ACTUATOR:false}"
+
+# Fictional Phase 1 actor only; not an authenticated identity.
+claims:
+  actor-role: "${CLAIMS_ACTOR_ROLE:INSURANCE_DIRECTOR}"
+  actor-username: "${CLAIMS_ACTOR_USERNAME:}"
+  documents:
+    max-file-size-bytes: 10485760
+    preview:
+      office-command: "${CLAIMS_PREVIEW_OFFICE_COMMAND:}"

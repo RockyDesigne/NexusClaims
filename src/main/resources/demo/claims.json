@@ -1,0 +1,428 @@
+[
+  {
+    "idempotencyKey": "complete-demo-001",
+    "insuredVehicleRegistration": "B-901-DMO",
+    "claimantVehicleRegistration": "B-101-DMO",
+    "claim": {
+      "context": {
+        "companyNetwork": "Nexus Mutual (fictional demo)",
+        "product": "MTPL",
+        "characteristics": [
+          "Material damages",
+          "Direct settlement",
+          "Regress"
+        ]
+      },
+      "general": {
+        "claimDate": "__CLAIM_DATE__",
+        "policyType": "MTPL",
+        "policySeries": "DEMO-MTPL",
+        "policyNumber": "DEMO-POL-001",
+        "notificationNumber": "DEMO-NOT-001",
+        "externalClaimNumber": "DEMO-EXT-CLM-001",
+        "externalNotificationNumber": "DEMO-EXT-NOT-001",
+        "sharedFault": false,
+        "suspiciousClaim": false,
+        "externalClaim": false,
+        "directSettlement": true,
+        "insuredVehicleAlienated": false,
+        "uncoveredRisk": false,
+        "onlineClaim": true
+      },
+      "policySnapshot": {
+        "issueDate": "__ISSUE_DATE__",
+        "ownerData": "Demo Insured Owner 001 (fictional)",
+        "userData": "Demo Policy User 001 (fictional)",
+        "vehicleData": "Demo Motors Example Hatchback; plate B-901-DMO; synthetic VIN TEST0000000000091",
+        "validFrom": "__VALID_FROM__",
+        "validTo": "__VALID_TO__",
+        "directSettlementEligible": "Yes",
+        "lookupStatus": "Fictional demo policy snapshot. No policy-system lookup or external verification was performed."
+      },
+      "additionalServices": {
+        "audatex": true,
+        "dat": true,
+        "auction": false
+      },
+      "event": {
+        "announcementDate": "__ANNOUNCEMENT_DATE__",
+        "damageAssessmentDate": "__ASSESSMENT_DATE__",
+        "damageAssessmentCounty": "Bucharest",
+        "accidentDate": "__ACCIDENT_DATE__",
+        "accidentTime": "09:15",
+        "accidentLocation": "Demo Junction 001, Bucharest (fictional)",
+        "accidentCounty": "Bucharest",
+        "accidentCity": "Bucharest",
+        "accidentCountry": "Romania",
+        "accidentPlace": "Fictional demonstration street 1",
+        "description": "Fictional demo: the insured vehicle struck the rear-left side of a parked sedan at a junction. No real incident or person is represented.",
+        "accidentVisibility": "Good",
+        "roadCondition": "Dry",
+        "accidentDocuments": "Amicable settlement",
+        "amicableSettlementNumber": "DEMO-AMICABLE-001",
+        "remarksInspectionReport": "Demo inspection 001: photographs and notes are simulated; no real inspection was performed.",
+        "additionalInvestigations": "No further investigation requested in this fictional example.",
+        "numberOfCarsInvolved": "2",
+        "directEmailNoPriorPhone": true,
+        "knownEmailOrIntermediary": false,
+        "thirdPartyOrAutoServiceNotification": false,
+        "compensationRequestedAtNotification": true,
+        "differentCityOrRepairShopAssessment": false
+      },
+      "claimant": {
+        "type": "FOREIGN_NATURAL_PERSON",
+        "identifier": "DEMO-PERSON-001",
+        "firstName": "Alex",
+        "lastName": "Vehicle Demo",
+        "companyName": "",
+        "address": "1 Fictional Demo Lane, Bucharest, Romania",
+        "phone": "+12025550101",
+        "email": "demo.vehicle@example.test"
+      },
+      "damagedObject": {
+        "type": "Vehicle",
+        "vehicle": {
+          "registrationPlate": "B-101-DMO",
+          "vin": "TEST0000000000001",
+          "category": "Passenger car",
+          "make": "Demo Motors",
+          "model": "Example Sedan",
+          "registrationType": "Permanent",
+          "mileage": "48320",
+          "manufactureYear": "2020",
+          "vehicleColor": "Blue",
+          "firstRegistrationDate": "2020-06-15",
+          "insuredPeriodFrom": "__VALID_FROM__",
+          "insuredPeriodTo": "__VALID_TO__",
+          "regress": "Regress",
+          "recoveryPercentage": "25",
+          "aidaStatus": "Fictional demo vehicle. AIDA is a stub; no external verification has been performed."
+        }
+      },
+      "damages": {
+        "lines": [
+          {
+            "id": "demo-001-damage-1",
+            "name": "Rear bumper",
+            "number": "1",
+            "symbol": "Rear bumper assembly",
+            "operation": "Replace"
+          },
+          {
+            "id": "demo-001-damage-2",
+            "name": "Left rear quarter panel",
+            "number": "2",
+            "symbol": "Rear-left body panel",
+            "operation": "Repair"
+          }
+        ],
+        "documents": "Estimate",
+        "accidentType": "Material damage",
+        "damageType": "Vehicle body",
+        "damageReason": "Collision",
+        "solutionMode": "Repair",
+        "preexistingDamages": "No preexisting damage reported in this fictional example."
+      },
+      "valuation": {
+        "initialReserve": {
+          "amount": "4500.00",
+          "currency": "RON"
+        },
+        "vehicleMarketValue": {
+          "amount": "32500.00",
+          "currency": "RON"
+        },
+        "wreckedCarValue": {
+          "amount": "6500.00",
+          "currency": "RON"
+        },
+        "maximumCompensation": {
+          "amount": "26000.00",
+          "currency": "RON"
+        },
+        "requestDate": "__REQUEST_DATE__"
+      },
+      "liability": {
+        "guiltyStatus": "Insured driver",
+        "damagedVehicleDriver": "Casey Demo Driver (fictional)"
+      }
+    }
+  },
+  {
+    "idempotencyKey": "complete-demo-002",
+    "insuredVehicleRegistration": "CJ-902-DMO",
+    "claimantVehicleRegistration": "",
+    "claim": {
+      "context": {
+        "companyNetwork": "Nexus Mutual (fictional demo)",
+        "product": "MTPL",
+        "characteristics": [
+          "Injury"
+        ]
+      },
+      "general": {
+        "claimDate": "__CLAIM_DATE__",
+        "policyType": "MTPL",
+        "policySeries": "DEMO-MTPL",
+        "policyNumber": "DEMO-POL-002",
+        "notificationNumber": "DEMO-NOT-002",
+        "externalClaimNumber": "DEMO-EXT-CLM-002",
+        "externalNotificationNumber": "DEMO-EXT-NOT-002",
+        "sharedFault": false,
+        "suspiciousClaim": false,
+        "externalClaim": false,
+        "directSettlement": false,
+        "insuredVehicleAlienated": false,
+        "uncoveredRisk": false,
+        "onlineClaim": true
+      },
+      "policySnapshot": {
+        "issueDate": "__ISSUE_DATE__",
+        "ownerData": "Demo Insured Owner 002 (fictional)",
+        "userData": "Demo Policy User 002 (fictional)",
+        "vehicleData": "Demo Motors Example Hatchback; plate CJ-902-DMO; synthetic VIN TEST0000000000092",
+        "validFrom": "__VALID_FROM__",
+        "validTo": "__VALID_TO__",
+        "directSettlementEligible": "No",
+        "lookupStatus": "Fictional demo policy snapshot. No policy-system lookup or external verification was performed."
+      },
+      "additionalServices": {
+        "audatex": false,
+        "dat": false,
+        "auction": false
+      },
+      "event": {
+        "announcementDate": "__ANNOUNCEMENT_DATE__",
+        "damageAssessmentDate": "__ASSESSMENT_DATE__",
+        "damageAssessmentCounty": "Cluj",
+        "accidentDate": "__ACCIDENT_DATE__",
+        "accidentTime": "14:30",
+        "accidentLocation": "Demo Junction 002, Cluj-Napoca (fictional)",
+        "accidentCounty": "Cluj",
+        "accidentCity": "Cluj-Napoca",
+        "accidentCountry": "Romania",
+        "accidentPlace": "Fictional demonstration street 2",
+        "description": "Fictional demo: a passenger reported a bruised left forearm after a low-speed collision. The medical information is invented for UI review.",
+        "accidentVisibility": "Good",
+        "roadCondition": "Dry",
+        "accidentDocuments": "Amicable settlement",
+        "amicableSettlementNumber": "DEMO-AMICABLE-002",
+        "remarksInspectionReport": "Demo inspection 002: photographs and notes are simulated; no real inspection was performed.",
+        "additionalInvestigations": "No further investigation requested in this fictional example.",
+        "numberOfCarsInvolved": "2",
+        "directEmailNoPriorPhone": true,
+        "knownEmailOrIntermediary": false,
+        "thirdPartyOrAutoServiceNotification": false,
+        "compensationRequestedAtNotification": true,
+        "differentCityOrRepairShopAssessment": false
+      },
+      "claimant": {
+        "type": "FOREIGN_NATURAL_PERSON",
+        "identifier": "DEMO-PERSON-002",
+        "firstName": "Robin",
+        "lastName": "Injury Demo",
+        "companyName": "",
+        "address": "2 Fictional Demo Lane, Cluj-Napoca, Romania",
+        "phone": "+12025550102",
+        "email": "demo.injury@example.test"
+      },
+      "damagedObject": {
+        "type": "Injury",
+        "injury": {
+          "injuredPersonName": "Robin Injury Demo (fictional)",
+          "roleInAccident": "Passenger",
+          "description": "Fictional left forearm bruising after a low-speed collision. No actual medical record or diagnosis is represented.",
+          "bodyArea": "Left forearm",
+          "medicalProvider": "Demo Clinic (fictional)",
+          "firstTreatmentDate": "__ACCIDENT_DATE__",
+          "medicalDocumentReference": "DEMO-MED-002 (fictional reference)"
+        }
+      },
+      "damages": {
+        "lines": [
+          {
+            "id": "demo-002-damage-1",
+            "name": "Reported forearm injury",
+            "number": "1",
+            "symbol": "Left forearm",
+            "operation": "Inspect"
+          },
+          {
+            "id": "demo-002-damage-2",
+            "name": "Reported shoulder bruising",
+            "number": "2",
+            "symbol": "Left shoulder",
+            "operation": "Inspect"
+          }
+        ],
+        "documents": "Police report",
+        "accidentType": "Bodily injury",
+        "damageType": "Other",
+        "damageReason": "Collision",
+        "solutionMode": "Compensation",
+        "preexistingDamages": "No preexisting damage reported in this fictional example."
+      },
+      "valuation": {
+        "initialReserve": {
+          "amount": "8000.00",
+          "currency": "RON"
+        },
+        "vehicleMarketValue": {
+          "amount": "0.00",
+          "currency": "RON"
+        },
+        "wreckedCarValue": {
+          "amount": "0.00",
+          "currency": "RON"
+        },
+        "maximumCompensation": {
+          "amount": "25000.00",
+          "currency": "RON"
+        },
+        "requestDate": "__REQUEST_DATE__"
+      },
+      "liability": {
+        "guiltyStatus": "Insured driver",
+        "damagedVehicleDriver": "Not applicable to this non-vehicle damaged object."
+      }
+    }
+  },
+  {
+    "idempotencyKey": "complete-demo-003",
+    "insuredVehicleRegistration": "TM-903-DMO",
+    "claimantVehicleRegistration": "",
+    "claim": {
+      "context": {
+        "companyNetwork": "Nexus Mutual (fictional demo)",
+        "product": "MTPL",
+        "characteristics": [
+          "Material damages",
+          "External"
+        ]
+      },
+      "general": {
+        "claimDate": "__CLAIM_DATE__",
+        "policyType": "MTPL",
+        "policySeries": "DEMO-MTPL",
+        "policyNumber": "DEMO-POL-003",
+        "notificationNumber": "DEMO-NOT-003",
+        "externalClaimNumber": "DEMO-EXT-CLM-003",
+        "externalNotificationNumber": "DEMO-EXT-NOT-003",
+        "sharedFault": false,
+        "suspiciousClaim": false,
+        "externalClaim": true,
+        "directSettlement": false,
+        "insuredVehicleAlienated": false,
+        "uncoveredRisk": false,
+        "onlineClaim": true
+      },
+      "policySnapshot": {
+        "issueDate": "__ISSUE_DATE__",
+        "ownerData": "Demo Insured Owner 003 (fictional)",
+        "userData": "Demo Policy User 003 (fictional)",
+        "vehicleData": "Demo Motors Example Hatchback; plate TM-903-DMO; synthetic VIN TEST0000000000093",
+        "validFrom": "__VALID_FROM__",
+        "validTo": "__VALID_TO__",
+        "directSettlementEligible": "No",
+        "lookupStatus": "Fictional demo policy snapshot. No policy-system lookup or external verification was performed."
+      },
+      "additionalServices": {
+        "audatex": false,
+        "dat": false,
+        "auction": false
+      },
+      "event": {
+        "announcementDate": "__ANNOUNCEMENT_DATE__",
+        "damageAssessmentDate": "__ASSESSMENT_DATE__",
+        "damageAssessmentCounty": "Timis",
+        "accidentDate": "__ACCIDENT_DATE__",
+        "accidentTime": "17:45",
+        "accidentLocation": "Demo Junction 003, Timisoara (fictional)",
+        "accidentCounty": "Timis",
+        "accidentCity": "Timisoara",
+        "accidentCountry": "Romania",
+        "accidentPlace": "Fictional demonstration street 3",
+        "description": "Fictional demo: a vehicle left the road and damaged a garden fence and gate. The address, owner, and incident are invented for UI review.",
+        "accidentVisibility": "Good",
+        "roadCondition": "Dry",
+        "accidentDocuments": "Amicable settlement",
+        "amicableSettlementNumber": "DEMO-AMICABLE-003",
+        "remarksInspectionReport": "Demo inspection 003: photographs and notes are simulated; no real inspection was performed.",
+        "additionalInvestigations": "No further investigation requested in this fictional example.",
+        "numberOfCarsInvolved": "2",
+        "directEmailNoPriorPhone": true,
+        "knownEmailOrIntermediary": false,
+        "thirdPartyOrAutoServiceNotification": true,
+        "compensationRequestedAtNotification": true,
+        "differentCityOrRepairShopAssessment": false
+      },
+      "claimant": {
+        "type": "LEGAL_ENTITY",
+        "identifier": "DEMO-ORG-003",
+        "firstName": "",
+        "lastName": "",
+        "companyName": "Demo Garden Works SRL (fictional)",
+        "address": "3 Fictional Demo Lane, Timisoara, Romania",
+        "phone": "+12025550103",
+        "email": "demo.property@example.test"
+      },
+      "damagedObject": {
+        "type": "Other property",
+        "property": {
+          "category": "Fence or gate",
+          "ownerName": "Demo Garden Works SRL (fictional)",
+          "location": "3 Fictional Demo Lane, Timisoara, Romania",
+          "identifier": "DEMO-FENCE-GATE-003",
+          "description": "Fictional timber fence: two panels and a metal entrance gate damaged by impact. Replacement of panels and repair of gate proposed."
+        }
+      },
+      "damages": {
+        "lines": [
+          {
+            "id": "demo-003-damage-1",
+            "name": "Broken fence panels",
+            "number": "1",
+            "symbol": "Timber fence panel",
+            "operation": "Replace"
+          },
+          {
+            "id": "demo-003-damage-2",
+            "name": "Bent entrance gate",
+            "number": "2",
+            "symbol": "Metal gate assembly",
+            "operation": "Repair"
+          }
+        ],
+        "documents": "Photos",
+        "accidentType": "Material damage",
+        "damageType": "Other",
+        "damageReason": "Collision",
+        "solutionMode": "Repair",
+        "preexistingDamages": "No preexisting damage reported in this fictional example."
+      },
+      "valuation": {
+        "initialReserve": {
+          "amount": "3600.00",
+          "currency": "RON"
+        },
+        "vehicleMarketValue": {
+          "amount": "0.00",
+          "currency": "RON"
+        },
+        "wreckedCarValue": {
+          "amount": "0.00",
+          "currency": "RON"
+        },
+        "maximumCompensation": {
+          "amount": "7200.00",
+          "currency": "RON"
+        },
+        "requestDate": "__REQUEST_DATE__"
+      },
+      "liability": {
+        "guiltyStatus": "Insured driver",
+        "damagedVehicleDriver": "Not applicable to this non-vehicle damaged object."
+      }
+    }
+  }
+]
